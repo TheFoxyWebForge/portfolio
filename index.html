@@ -1,606 +1,221 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <title>The Foxy Web Forge</title>
-  <!--google fonts for text-->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sneha Khandelwal | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #0e1117;
+      color: #c9d1d9;
+      line-height: 1.7;
+      margin: 0;
+      overflow-x: hidden;
+    }
 
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,500;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
-    rel="stylesheet">
+    .hero {
+      background: linear-gradient(to right, #161b22, #0d1117);
+      color: #ffffff;
+      text-align: center;
+      padding: 120px 20px;
+      position: relative;
+    }
 
-<!--css style sheets-->
+    .hero h1 {
+      font-size: 3.5rem;
+      font-weight: 700;
+    }
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/styles.css">
+    .hero p {
+      font-size: 1.25rem;
+      margin-top: 20px;
+    }
 
-  <!--font awesome-->
-  <script defer src="https://pro.fontawesome.com/releases/v5.10.0/js/all.js" integrity="sha384-G/ZR3ntz68JZrH4pfPJyRbjW+c0+ojii5f+GYiYwldYU69A+Ejat6yIfLSxljXxD" crossorigin="anonymous"></script>
+    .btn-contact {
+      margin-top: 30px;
+      background-color: #238636;
+      color: white;
+      font-weight: 600;
+      padding: 12px 30px;
+      border-radius: 8px;
+      border: none;
+      transition: all 0.3s ease;
+    }
 
+    .btn-contact:hover {
+      background-color: #2ea043;
+      transform: scale(1.05);
+    }
 
-<!--bootstrap -->
+    section {
+      padding: 80px 10%;
+    }
 
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    .section-title {
+      text-align: center;
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 50px;
+      color: #238636;
+    }
+
+    .timeline-card {
+      background: #161b22;
+      border-left: 4px solid #238636;
+      padding: 25px;
+      margin: 25px 0;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    }
+
+    ul li {
+      margin-bottom: 10px;
+      list-style-type: none;
+    }
+
+    .skills ul {
+      padding-left: 20px;
+    }
+
+    .skills ul li::before {
+      content: "\f00c";
+      font-family: 'Font Awesome 5 Free';
+      margin-right: 10px;
+      font-weight: 900;
+      color: #238636;
+    }
+
+    .socials i {
+      font-size: 24px;
+      margin: 0 12px;
+      color: #238636;
+      transition: transform 0.3s ease;
+    }
+
+    .socials i:hover {
+      transform: scale(1.2);
+    }
+
+    footer {
+      background-color: #0d1117;
+      text-align: center;
+      padding: 40px 20px;
+      color: #8b949e;
+    }
+
+    .text-center {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+  </style>
 </head>
 
 <body>
-  <style media="screen">
-  body{
-    font-family: Montserrat;
-  }
+  <section class="hero" data-aos="zoom-in">
+    <h1>Sneha Khandelwal</h1>
+    <p>Crafting Seamless Web Experiences | Empowering D2C Brands with Scalable Tech</p>
+    <a href="mailto:snehakhandelwal333@gmail.com" class="btn btn-contact">Let's Connect</a>
+  </section>
 
-  #title{
+  <section data-aos="fade-up">
+    <h2 class="section-title">Who I Am</h2>
+    <p class="text-center">I’m a solution-driven engineer with a passion for problem-solving and technology. With 2+
+      years in SaaS, I specialize in integrating D2C brands, tailoring Shopify themes, and building impactful,
+      user-friendly interfaces that drive business growth. I bridge the gap between technology and customer success
+      through clean code, collaboration, and innovation.</p>
+  </section>
 
-    color: #fff;
-    background-color: #40514E;
+  <section data-aos="fade-right">
+    <h2 class="section-title">Professional Experience</h2>
+    <div class="timeline-card">
+      <h4>Solution Engineer — Shopflo <small class="text-muted">(Apr 2024 – Present)</small></h4>
+      <ul>
+        <li>Architected custom Shopify enhancements, improving engagement & checkout efficiency.</li>
+        <li>Streamlined event tracking across Meta & Google platforms, ensuring precision in analytics.</li>
+        <li>Collaborated cross-functionally with sales and CS teams to deliver end-to-end technical solutions.</li>
+        <li>Facilitated technical onboarding with demos and tailored walkthroughs.</li>
+      </ul>
+    </div>
+    <div class="timeline-card">
+      <h4>Integration Engineer — Shopflo <small class="text-muted">(Nov 2022 – Mar 2024)</small></h4>
+      <ul>
+        <li>Onboarded over 300 D2C brands, delivering seamless transitions and fast integrations.</li>
+        <li>Reduced onboarding time through internal documentation and automation improvements.</li>
+        <li>Acted as a bridge between clients and engineering, diagnosing and resolving technical issues fast.</li>
+      </ul>
+    </div>
+    <div class="timeline-card">
+      <h4>Front-End Intern — Forward Staffing <small class="text-muted">(Feb 2022 – May 2022)</small></h4>
+      <ul>
+        <li>Created responsive web UIs using HTML, CSS, and JavaScript for real-world HR tools.</li>
+      </ul>
+    </div>
+  </section>
 
-  }
-  h1 {
-  font-family: Montserrat-Black;
-    font-size:3.5rem;
-    line-height: 1.5;
+  <section data-aos="fade-left">
+    <h2 class="section-title">Education</h2>
+    <div class="timeline-card">
+      <h4>B.Tech. in Information Technology</h4>
+      <p>Swami Keshvanand Institute of Technology, Jaipur — 2019–2023 <br> <em>SGPA: 9.46/10</em></p>
+    </div>
+    <div class="timeline-card">
+      <h4>Senior Secondary</h4>
+      <p>Maheshwari Girls Senior Secondary School, Jaipur — 2017–2018 <br> <em>Percentage: 86.2%</em></p>
+    </div>
+  </section>
 
-    font-weight: bolder;
-
-
-  }
-
-  * {
-    box-sizing: border-box;
-  }
-
-  /* Set a background color */
-  body {
-    background-color: #474e5d;
-    font-family: Helvetica, sans-serif;
-  }
-
-    #testimonials{
-    background-color: #40514E;
-
-
-
-
-    }
-  /* The actual timeline (the vertical ruler) */
-  .timelines {
-    position: relative;
-    max-width: 800px;
-    margin: 0 auto;
-
-  }
-
-  /* The actual timeline (the vertical ruler) */
-  .timelines::after {
-    content: '';
-    position: absolute;
-    width: 6px;
-    background-color: white;
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    margin-left: -3px;
-  }
-
-  /* Container around content */
-  .fcontainer {
-    padding: 10px 20px;
-    position: relative;
-    background-color: inherit;
-    width: 50%;
-  }
-
-  /* The circles on the timeline */
-  .fcontainer::after {
-    content: '';
-    position: absolute;
-    width: 25px;
-    height: 25px;
-    right: -17px;
-    background-color: white;
-    border: 4px solid #FF9F55;
-    top: 15px;
-    border-radius: 50%;
-    z-index: 1;
-  }
-
-  /* Place the container to the left */
-  .left {
-    left: 0%;
-  }
-
-  /* Place the container to the right */
-  .right {
-    left: 50%;
-  }
-
-  /* Add arrows to the left container (pointing right) */
-  .left::before {
-    content: " ";
-    height: 0;
-    position: absolute;
-    top: 22px;
-    width: 0;
-    z-index: 1;
-    right: 30px;
-    border: medium solid white;
-    border-width: 10px 0 10px 10px;
-    border-color: transparent transparent transparent white;
-  }
-
-  /* Add arrows to the right container (pointing left) */
-  .right::before {
-    content: " ";
-    height: 0;
-    position: absolute;
-    top: 22px;
-    width: 0;
-    z-index: 1;
-    left: 30px;
-    border: medium solid white;
-    border-width: 10px 10px 10px 0;
-    border-color: transparent white transparent transparent;
-  }
-
-  /* Fix the circle for containers on the right side */
-  .right::after {
-    left: -16px;
-  }
-
-  /* The actual content */
-  .contentss {
-    padding: 20px 30px;
-    background-color: white;
-    position: relative;
-    border-radius: 6px;
-  }
-
-  /* Media queries - Responsive timeline on screens less than 600px wide */
-  @media screen and (max-width: 600px) {
-  /* Place the timelime to the left */
-    .timeline::after {
-      left: 31px;
-    }
-
-  /* Full-width containers */
-    .container {
-      width: 100%;
-      padding-left: 70px;
-      padding-right: 25px;
-    }
-
-  /* Make sure that all arrows are pointing leftwards */
-    .container::before {
-      left: 60px;
-      border: medium solid white;
-      border-width: 10px 10px 10px 0;
-      border-color: transparent white transparent transparent;
-    }
-
-  /* Make sure all circles are at the same spot */
-    .left::after, .right::after {
-      left: 15px;
-    }
-
-  /* Make all right containers behave like the left ones */
-    .right {
-      left: 0%;
-    }
-  }
-
-  }
-  h2{
-    font-family: Montserrat-bold;
-    font-weight: bold;
-    font-size: 3rem;
-    line-height: 1.5;
-
-  }
-  h3{
-    font-family: Montserrat-bold;
-    font-weight: bold;
-  }
-  p{
-    color: #8f8f8f;
-  }
-  .container-fluid{
-    padding: 3% 15% 7%;
-  }
-  .navbar{
-    padding: 0 0 4.5rem;
-  }
-  .navbar-brand{
-    font-family: Ubuntu;
-    font-size: 2.5rem;
-    font-weight: bold;
-
-  }
-  .nav-item{
-    padding: 0 18px;
-  }
-  .nav-link{
-    font-size: 1.2rem;
-    font-family: Montserrat;
-    font-weight: 400;
-  }
-
-  .download-button{
-    margin: 5% 3% 5% 0;
-  }
-  .title-image{
-    width:100%;
-  position: absolute;
-
-  right: 10%;
-
-  }
-  #features{
-  padding: 7% 15%;
-
-  background-color: #EAF6F6;
-  position: relative;
-  z-index: 1;
-
-  }
-  .features-Box{
-    text-align: center;
-    padding: 4.5%;
-
-  }
-  .icon{
-    color: #ef8172;
-    padding-bottom: 1rem;
-  }
-  .icon:hover {
-    color: #ff4c68;
-  }
-
-
-  #press{
-    padding: 7% 15%;
-    background-color: #EAF6F6;
-    text-align: center;
-  padding-bottom: 3%;
-
-  }
-  .press-logo{
-  width: 15%;
-  padding: 2%;
-  }
-  .carousel-item{
-  padding: 7% 15%;
-  }
-  #pricing{
-    padding: 100px;
-    align-items: center;
-  text-align: center;
-  color: #fff;
-    background-color: #40514E;
-
-  }
-  .card-body{color: #40514E;
-    background-color: #EAF6F6;
-    text-align: center;
-    align-items: center;
-
-  }
-
-  .pricing-table{
-
-    padding: 2% 3%;
-  background-color: #40514E;
-  }
-  @media (max-width :1028px) {
-    .title-image{
-      position:static;
-      transform: rotate(0);
-
-    }
-
-
-  #title{
-    text-align: center;
-  }
-
-  }
-  #cta{
-  text-align: center;
-      background-color:#EAF6F6;
-      color: #40514E;
-      padding: 7% 15%;
-  }
-  .ull{
-    text-align: left;
-  }
-  .cta-h2{
-    font-family: "Montserrat-black";
-  font-weight: 800;
-  font-size: 3.5rem;
-  line-height: 1.5;
-
-  }
-  #footer{
-    background-color: #40514E;
-    color: #EAF6F6;
-    padding: 7% 15%;
-    text-align: center;
-  }
-
-  .social-icon{
-    margin: 20px 10px;
-  }
-
-  </style>
-
-  <section id="title">
-
-    <!-- Nav Bar -->
-    <div class="container-fluid">
-      <nav class="navbar navbar-expand-lg navbar-dark">
-        <a class="navbar-brand" href="">TheFoxyWebForge</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-          <ul class="navbar-nav ml-auto">
-
-            <li class="nav-item">
-              <a class="nav-link" href="#footer">Contect </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#pricing">Skills </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#testimonials">Education</a>
-            </li>
-
-          </ul>
-        </div>
-      </nav>
-
-
-
-
-    <!-- Title -->
-
+  <section class="skills" data-aos="zoom-in-up">
+    <h2 class="section-title">Core Skills</h2>
     <div class="row">
-      <div class="col-lg-6">
-        <img class="title-image" src="images\profile.png" alt="profile">
+      <div class="col-md-6">
+        <ul>
+          <li>Shopify Platform & Liquid</li>
+          <li>JavaScript, HTML, CSS</li>
+          <li>API Integration & Webhooks</li>
+          <li>Event Tracking (GA-4, Meta Pixel)</li>
+          <li>Tools: Jira, Hubspot, Retool</li>
+        </ul>
       </div>
-      <div class="col-lg-6">
-      <center>  <h1>Hello! </h1>
-        <br>
-  </center> <p>My name is Sneha Khandelwal .<br> I'm a B.tech Student and looking forward to work in the field of Web Development.</p>
-
-  <br><br><br>  <center> <a class="btn" href="mailto:snehakhandelwal@gmail.com">CONTACT ME</a></center>
+      <div class="col-md-6">
+        <ul>
+          <li>AWS CloudWatch & Logs</li>
+          <li>Client Onboarding & Technical Training</li>
+          <li>Process Automation & Internal Docs</li>
+          <li>SaaS Product Debugging & QA</li>
+          <li>Team Collaboration & Communication</li>
+        </ul>
       </div>
-
-
     </div>
-</div>
   </section>
 
-
-  <!-- Features -->
-
-  <section id="features">
-    <div class="row">
-
-
-<center>
-<h1><i class="fas fa-user-tie"></i></h1><h2> Professional Summary</h2>
-
-<p>Ambitious, career-focused jobseeker, anxious to obtain an entry-level
-web developer position to help launch career while achieving company
-goals. Organized and dependable candidate successful at managing
-multiple priorities with a positive attitude. Willingness to take on added
-responsibilities to meet team goals.</p>
-
-
-</center>
-
-</div>
-  </section>
-
-
-  <!-- Testimonials -->
-
-  <section id="testimonials">
-<!-- carousel slides -->
-
-<br>
-<h1 style="padding-left:48%"><i class="fas fa-graduation-cap"></i></h1>
-<h2 style="padding-left:45%">Education</h2>
-<div class="timelines">
-  <div class="fcontainer left">
-    <div class="contentss">
-      <h3>Aug, 2019 - Aug, 2023</h3>
-      <p>Bachelor of Technology at Swami Keshvanand Institute of
-Technology, Management, jaipur</p>
-<br><em>Branch - Information technology</em>
-
+  <footer>
+    <p>Let’s stay connected:</p>
+    <div class="socials">
+      <a href="https://github.com/TheFoxyWebForge"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/sneha-khandelwal-1a5014220/"><i class="fab fa-linkedin"></i></a>
+      <a href="mailto:snehakhandelwal333@gmail.com"><i class="fas fa-envelope"></i></a>
     </div>
-  </div>
-  <div class="fcontainer right">
-    <div class="contentss">
-    <h3>Aug, 2016 - Aug, 2018</h3>
-  <p>Senior Secondary Education at Maheshwari Girls Senior
-Secondary School, jaipur</p>
-    </div>
-  </div>
-</div>
-
-
-  </section>
-
-
-  <!-- Press -->
-
-  <section id="press">
-<h1><i class="fas fa-briefcase"></i></h1><h2>Projects</h2>
-<p><em>Jul, 2006 - Jul, 2016</em></p>
-<br>
-<p>It's a responsive web page which i have designed using HTML , CSS , Bootstrap , Jvavscript , jquery , node.js , express.js .
-It is fully responsive . Head over to it and enjoy .</p>
-<a href="https://guarded-fortress-00181.herokuapp.com/">click me </a>
-
-  </section>
-
-
-  <!-- Pricing -->
-
-  <section id="pricing">
-
-    <h2> Skills</h2>
-
-<br><br>
-<!-- bootstap-cards -->
-
-<div id="testimonial-carousel" class="carousel slide" data-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-
-  <div class="card-body">
-   <h2>C programming</h2>
-   <div class="progress">
-  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%"></div>
-  </div>
-
-      <br><br>
-    <h2>HTML</h2>
-    <div class="progress">
-    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
-  </div><br><br>
-  <h2>CSS</h2>
-  <div class="progress">
-  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
-  </div>
-  <br><br>
-  <h2>Jvavscript</h2>
-  <div class="progress">
-  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%"></div>
-  </div>
-  <br><br>
-  <h2>jquery</h2>
-  <div class="progress">
-  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 85%"></div>
-  </div>
-    </div>
-
-
-    </div>
-    <div class="carousel-item">
-
-
-
-        <div class="card-body">
-          <h2>Node.js </h2>
-    <div class="progress">
-    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 85%"></div>
-  </div><br><br>
-  <h2>unix </h2>
-  <div class="progress">
-  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
-  </div><br><br>
-  <h2>Bootstrap</h2>
-  <div class="progress">
-  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 95%"></div>
-  </div><br><br>
-  <h2>DBMS</h2>
-  <div class="progress">
-  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 80%"></div>
-  </div><br><br>
-  <h2>SQL</h2>
-  <div class="progress">
-  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 85%"></div>
-  </div>
-
-    </div>
-        </div>
-    <div class="carousel-item">
-
-
-
-        <div class="card-body">
-          <h2>Linux OS</h2>
-          <div class="progress">
-          <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 99%"></div>
-          </div><br><br>
-          <h2>web design</h2>
-          <div class="progress">
-          <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 90%"></div>
-          </div><br><br>
-          <h2>Microsoft office</h2>
-          <div class="progress">
-          <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 95%"></div>
-          </div><br><br>
-          <h2>java</h2>
-          <div class="progress">
-          <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
-          </div><br><br>
-          <h2>c++</h2>
-          <div class="progress">
-          <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
-          </div>
-
-
-    </div>
-  </div>
-
-
-    </div>
-
-  <a class="carousel-control-prev" href="#testimonial-carousel" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#testimonial-carousel" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
-
-
-
-
-
-  </section>
-
-
-  <!-- Call to Action -->
-
-  <section id="cta">
-
-    <h2 class="cta-h2"><i class="fas fa-clipboard-list"></i>       Interpersonal skills</h2>
-  <ul class="ull"><li>Loves to learn new technical skills.</li>
-<li>  Love to learn technical courses related to java , linux , sql, cloud.</li>
-<li>  Huge interest in designing beautiful websites.</li>
-  <li>can easily adjust in different situations.</li>
-<li>  morally fit and well being for any environment.</li>
-<li>  can become a good team leader.</li>
-</ul>
-  </section>
-
-
-  <!-- Footer -->
-
-  <footer id="footer">
-
-<a class="" href="https://www.instagram.com/sneha__khandelwal_/"><i class="social-icon fab fa-instagram"></i>
-</a>
-<a href="https://twitter.com/SnehaKh64997666"><i class="social-icon fab fa-twitter"></i></a>
-<a href="https://www.linkedin.com/in/sneha-khandelwal-1a5014220/"><i class="social-icon fab fa-linkedin-in"></i></a>
-  <p>© TheFoxyWebForge</p>
-
+    <p class="mt-3">Designed & Developed by Sneha Khandelwal · © 2025</p>
   </footer>
 
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1200,
+    });
+  </script>
 </body>
 
 </html>
